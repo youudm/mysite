@@ -1,0 +1,41 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+.grid a:nth-child(1) {
+  grid-row: span 3;
+}
+
+.grid a:nth-child(2) {
+  grid-row: span 2;
+}
+
+.grid a:nth-child(3) {
+  grid-row: span 3;
+}
+
+.grid a:nth-child(4) {
+  grid-row: span 2;
+}
+
+.grid a:nth-child(5) {
+  grid-row: span 1;
+}
+
+.grid a:nth-child(6) {
+  grid-row: span 1;
+}
+
+.grid a:nth-child(7) {
+  grid-row: span 2;
+}
+
+.grid a:nth-child(8) {
+  grid-row: span 1;
+}
+
+.grid a:nth-child(9) {
+  grid-row: span 2;
+}
