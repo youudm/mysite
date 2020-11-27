@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
     <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./js/magnific-popup.css" />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
@@ -18,10 +19,23 @@
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/common.js"></script>
+    <script src="./js/contact.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
+    <!-- 컨텍트 모달 -->
+    <div id="test-modal" class="mfp-hide white-popup-block">
+      <h2>CONTACT</h2>
+      <p>
+        You won't be able to dismiss this by usual means (escape or click
+        button), but you can close it programatically based on user choices or
+        actions.
+      </p>
+      <p><a class="popup-modal-dismiss" href="#">닫기</a></p>
+    </div>
+
     <!-- 전체메뉴 -->
     <div class="menu">
       <div class="menu_container">
@@ -100,7 +114,9 @@
             <li><a href="./banner.html" class="green">Banner & Poster</a></li>
             <li><a href="./uiux.html" class="green">UI/UX</a></li>
           </ul>
-          <div class="menu_btn">CONTACT</div>
+          <div class="menu_btn">
+            <a class="popup-modal" href="#test-modal">CONTACT</a>
+          </div>
         </div>
       </div>
       <div class="close"><i class="xi-close-thin"></i></div>
@@ -164,6 +180,17 @@
           clearInterval(tyInt) //끝나면 반복종료
         }
       }
+
+      $('.popup-modal').magnificPopup({
+        type: 'inline',
+        preloader: false,
+        focus: '#username',
+        modal: true
+      })
+      $(document).on('click', '.popup-modal-dismiss', function (e) {
+        e.preventDefault()
+        $.magnificPopup.close()
+      })
     </script>
   </body>
 </html>
