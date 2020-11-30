@@ -17,6 +17,7 @@ h2 {
 }
 
 .snb_content {
+  padding-bottom: 50px;
 }
 
 .sub_nav {
@@ -76,9 +77,16 @@ div.sub_nav h2:hover:before {
 }
 
 .grid img {
+  /* width: 345px;
+  height: 565px; */
   margin-bottom: 30px;
   box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+}
+
+.grid-item01 img {
+  width: 345px;
+  height: 565px;
 }
 
 .grid img:hover {
@@ -88,4 +96,16 @@ div.sub_nav h2:hover:before {
 .mfp-bg {
   background: #000;
   opacity: 0.86;
+}
+
+.mfp-title {
+  font-size: 18px;
+  text-align: left;
+  color: #f3f3f3;
+  word-wrap: break-word;
+}
+
+.mfp-image-holder .mfp-close,
+.mfp-iframe-holder .mfp-close {
+  font-size: 40px;
 }
