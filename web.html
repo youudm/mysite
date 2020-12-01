@@ -55,11 +55,11 @@
           <button type="submit" class="contact_btn">보내기</button>
         </form>
         <!-- <p><a class="popup-modal-dismiss" href="#">닫기</a></p> -->
-        <!-- <div class="email_modal">
-                  <span>✨</span>
-                  <p>메일이 성공적으로<br />발송되었습니다.</p>
-                  <button class="contact_btn email_close">닫기</button>
-                </div> -->
+        <div class="email_modal">
+          <span>✨</span>
+          <p>메일이 성공적으로<br />발송되었습니다.</p>
+          <button class="contact_btn email_close">닫기</button>
+        </div>
       </div>
     </div>
 
@@ -174,54 +174,54 @@
           </div>
           <p>
             실무중심의 다양한 웹페이지를 디자인하였습니다. 툴은 Photoshop과
-            Illustrator, Figma를 사용하였습니다. 클릭하시면 해당 상세 페이지로
-            넘어갑니다.
+            Illustrator, Figma를 사용하였습니다. 클릭하시면 자세히 보실 수
+            있습니다.
           </p>
         </div>
         <div class="grid">
           <a
             class="grid-item grid-item01"
-            href="./images/wab/web_big_01.png"
+            href="./royalpalace.html"
             title="웹디자인"
             ><img src="./images/wab/web_01.png" alt="img"
           /></a>
-          <a
+          <a class="grid-item" href="./royalpalace.html" title="웹디자인"
+            ><img src="./images/publishing/pub_03.png" alt="img"
+          /></a>
+          <a class="grid-item" href="./royalpalace.html" title="웹디자인"
+            ><img src="./images/publishing/pub_03.png" alt="img"
+          /></a>
+          <!-- <a
             class="grid-item"
             href="./images/banner/Banner_01_big.png"
             title="웹디자인"
             ><img src="./images/publishing/pub_03.png" alt="img"
-          /></a>
-          <a
-            class="grid-item"
-            href="./images/banner/Banner_01_big.png"
-            title="웹디자인"
-            ><img src="./images/publishing/pub_03.png" alt="img"
-          /></a>
+          /></a> -->
         </div>
       </div>
     </div>
 
     <script>
       // magnific-Popup
-      $('.grid-item').magnificPopup({
-        type: 'image',
-        closeOnContentClick: true,
-        image: {
-          verticalFit: false
-        }
-      })
+      // $(".grid-item").magnificPopup({
+      //   type: "image",
+      //   closeOnContentClick: true,
+      //   image: {
+      //     verticalFit: false,
+      //   },
+      // });
 
       // 모달
-      $('.popup-modal').magnificPopup({
-        type: 'inline',
+      $(".popup-modal").magnificPopup({
+        type: "inline",
         preloader: false,
-        focus: '#username',
-        modal: true
-      })
-      $(document).on('click', '.popup-modal-dismiss', function (e) {
-        e.preventDefault()
-        $.magnificPopup.close()
-      })
+        focus: "#username",
+        modal: true,
+      });
+      $(document).on("click", ".popup-modal-dismiss", function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+      });
     </script>
   </body>
 </html>

@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./js/magnific-popup.css" />
     <link
       rel="stylesheet"
       href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
     />
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/jquery.magnific-popup.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./js/common.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/Publishing.css" />
+    <link rel="stylesheet" href="./css/royalpalace.css" />
   </head>
-
   <body>
-    <!--  -->
     <!-- 컨텍트 모달 -->
     <div id="test-modal" class="mfp-hide white-popup-block">
       <div class="contact_modal">
@@ -52,15 +55,11 @@
           <button type="submit" class="contact_btn">보내기</button>
         </form>
         <!-- <p><a class="popup-modal-dismiss" href="#">닫기</a></p> -->
-        <!-- dimm -->
-      </div>
-      <div class="email_dimm">
-        <i class="xi-spinner-5 xi-spin"></i>
-      </div>
-      <div class="email_modal">
-        <span>💖🥰</span>
-        <p>메일이 성공적으로<br />발송되었습니다.</p>
-        <button class="email_close">닫기</button>
+        <!-- <div class="email_modal">
+              <span>✨</span>
+              <p>메일이 성공적으로<br />발송되었습니다.</p>
+              <button class="contact_btn email_close">닫기</button>
+            </div> -->
       </div>
     </div>
 
@@ -148,9 +147,6 @@
         </div>
       </div>
       <div class="close"><i class="xi-close-thin"></i></div>
-      <a href="index.html" class="header_logo"
-        ><img src="./images/logo.png" alt=""
-      /></a>
     </div>
 
     <!-- 헤더 -->
@@ -167,55 +163,54 @@
     </div>
 
     <!-- content -->
-    <div class="body">
-      <div class="content">
-        <div class="text">
-          <h2>안녕하세요</h2>
-          <!-- <h2 class="typing-txt">안녕하세요</h2>
-          <h2 class="typing"></h2> -->
-          <h3 class="typing-txt">웹퍼블리셔 서보경의 포트폴리오입니다</h3>
-          <h3 class="typing"></h3>
-          <!-- <h3>웹퍼블리셔 서보경의 포트폴리오입니다</h3> -->
-          <p>
-            개인 포트폴리오 사이트 입니다. 사이트에 방문해주셔서 감사합니다.
-          </p>
+    <div class="body container">
+      <div class="snb_content">
+        <div class="sub_nav">
+          <a href="./royalpalace.html">
+            <h2 class="sub_h2 royalpalace_h2">문화앱 경복궁 홈페이지</h2></a
+          >
+          <div class="sub_back">
+            <div class="back">
+              <a href="./web.html"
+                ><h4><i class="xi-angle-left-min">Back</i></h4></a
+              >
+            </div>
+            <p>
+              기존 경복궁 홈페이지를 리뉴엘 해서 디자인하였습니다. 툴은
+              Photoshop과 Figma를 사용하였습니다. 클릭하시면 해당 상세 페이지로
+              넘어갑니다.
+            </p>
+          </div>
         </div>
-        <div class="btn">
-          <a href="./publishing.html">
-            Publishing <i class="xi-angle-right-thin"></i
-          ></a>
-          <a href="./web.html">Design <i class="xi-angle-right-thin"></i></a>
+        <div class="grid sub_gird">
+          <a
+            class="grid-item"
+            href="./images/wab/web_big_01.png"
+            title="이미지 퍼블리싱"
+            ><img src="./images/wab/web_big_01.png" alt="img"
+          /></a>
+          <a class="grid-item" href="#" title="이미지 퍼블리싱"
+            ><img src="./images/wab/web_02.png" alt="img"
+          /></a>
+          <a class="grid-item" href="#" title="이미지 퍼블리싱"
+            ><img src="./images/wab/web_02.png" alt="img"
+          /></a>
         </div>
       </div>
     </div>
 
-    <!-- 스크립트 -->
-    <script src="./js/contact.js"></script>
-
     <script>
-      var typingBool = false;
-      var typingIdx = 0;
-      var typingTxt = $(".typing-txt").text(); // 타이핑될 텍스트를 가져온다
-      typingTxt = typingTxt.split(""); // 한글자씩 자른다.
-      if (typingBool == false) {
-        // 타이핑이 진행되지 않았다면
-        typingBool = true;
-
-        var tyInt = setInterval(typing, 100); // 반복동작
-      }
-
-      function typing() {
-        if (typingIdx < typingTxt.length) {
-          // 타이핑될 텍스트 길이만큼 반복
-          $(".typing").append(typingTxt[typingIdx]); // 한글자씩 이어준다.
-          typingIdx++;
-        } else {
-          clearInterval(tyInt); //끝나면 반복종료
-        }
-      }
+      // 모달
+      // magnific-Popup
+      $(".grid-item").magnificPopup({
+        type: "image",
+        closeOnContentClick: true,
+        image: {
+          verticalFit: false,
+        },
+      });
 
       // 모달
-
       $(".popup-modal").magnificPopup({
         type: "inline",
         preloader: false,
